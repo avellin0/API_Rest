@@ -26,6 +26,7 @@ app.post("/users", async (request, response) => {
     response.status(201).send(user)
 })
 
+
 app.listen(
     process.env.PORT || 3333,
     () => {
