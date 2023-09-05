@@ -8,7 +8,7 @@ const prisma = new PrismaClient()
 
 app.get("/users", async () => {
     const user = await prisma.user.findMany()
-    
+
     return { user }
 })
 
