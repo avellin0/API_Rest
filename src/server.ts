@@ -1,6 +1,8 @@
 import express from "express"
+import { rota } from "./routes/router"
 const app = express()
 
+app.use(rota)
 app.use(express.json())
 
 app.listen(
