@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import { Client } from "../database/Client";
+import { prisma } from "../database/Client";
 
 export class FindManyUsers {
     async handle(req: Request, res: Response) {
 
-        const AllUsers = await Client.user.findMany()
+        const AllUsers = await prisma.user.findMany()
 
         res.status(201).json(AllUsers)
     }
